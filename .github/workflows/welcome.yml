@@ -1,0 +1,16 @@
+name: Welcome Workflow
+
+on:
+  pull_request:
+    types: [opened]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print greeting
+        run: echo "Hello Ricky! GitHub Actions works!"
